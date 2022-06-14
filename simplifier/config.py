@@ -1,7 +1,6 @@
 import torch
 
 # Current language for simplification.
-lang = "en"
 
 # If word embeddings have been loaded.
 loaded_embeddings = False
@@ -20,3 +19,27 @@ supported_langs = ["ar","bg","ca","cs","da",
                    "nl","en","fi","fr","de",
                    "id","it","nb","pl","pt","ro",
                    "ru","es","sv","tr","uk","hu"]
+                   
+lang = "en"
+
+class UserData:
+
+    def __init__(self, lang="en", disable_embeddings=False, embeddings=None):
+        self.lang = lang
+        self.disable_embeddings = disable_embeddings
+        self.embeddings = embeddings
+        
+    def set_lang(self, lang):
+        self.lang = lang
+    
+    def set_disable(self, disable_embeddings):
+        self.disable_embeddings = disable_embeddings
+        
+    def set_embeddings(self, embeddings):
+        self.embeddings = embeddings
+        
+    def __str__(self):
+        return f"[ {self.lang}, {self.disable_embeddings}, {self.embeddings}]"
+    
+
+data_map = dict()
