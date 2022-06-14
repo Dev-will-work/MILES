@@ -90,10 +90,4 @@ if __name__ == "__main__":
     http_server = WSGIServer(('0.0.0.0', 80), app)    
     print("\nLoaded as HTTP Server on port 80, running forever:")
     http_server.serve_forever()
-    
-    
-    
-#Выведет карту и позволит методом геокодинга показать на этой карте все имеющиеся в НН корпуса ВШЭ
-#поле ввода, ввожу адрес, Большая печерская, 25, подсвечивается точка с этими координатами
 
-#будут Notifications и embed Android
